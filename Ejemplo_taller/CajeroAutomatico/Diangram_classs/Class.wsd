@@ -1,0 +1,16 @@
+@startuml
+class CuentaBancaria {
+    - saldo: double
+    + getSaldo(): double
+    + depositar(cantidad: double)
+    + retirar(cantidad: double)
+}
+
+class CajeroAutomatico {
+    - cuenta: CuentaBancaria
+    - scanner: Scanner
+    + mostrarMenu()
+}
+
+CajeroAutomatico --> CuentaBancaria : usa
+@enduml
